@@ -39,6 +39,8 @@ jobs:
           server-version: ${{ matrix.edgedb-version }}
 
       - uses: actions-rs/cargo@v1
+        env:
+          RUST_LOG: debug
         with:
           command: test
           args: --features github_action_install
