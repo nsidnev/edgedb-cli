@@ -11,7 +11,7 @@ use warp::filters::path::path;
 use crate::certs::Certs;
 
 const UNIX_INST: &str =
-    "curl -vL --proto '=https' --tlsv1.2 -sSf https://localhost:8443 | sh -xs -- -y";
+    "curl -vL --proto '=https' --http1.1 --tlsv1.2 -sSf https://localhost:8443 | sh -xs -- -y";
 
 #[test]
 fn github_action_install() -> anyhow::Result<()> {
