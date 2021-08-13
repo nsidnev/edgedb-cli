@@ -43,7 +43,7 @@ jobs:
           RUST_LOG: debug
         with:
           command: test
-          args: --features github_action_install
+          args: "--features github_action_install install::"
 
   musl-test:
     runs-on: ${{ matrix.os }}
