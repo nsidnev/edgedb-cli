@@ -9,7 +9,7 @@ use util::*;
 
 #[cfg(feature="portable_tests")]
 #[test]
-fn project_link_and_init_custom_dir() {
+fn project_link_and_init_from_non_project_dir() {
     Command::new("edgedb")
         .arg("--version")
         .assert()
