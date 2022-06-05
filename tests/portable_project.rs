@@ -146,7 +146,7 @@ fn project_link_and_init() {
         .arg("query").arg("SELECT 1")
         .current_dir("tests/proj/project2")
         .assert()
-        .context("query-6", "query after password")
+        .context("query-6", "query after password reset")
         .success();
 
     Command::new("edgedb")
@@ -222,6 +222,7 @@ fn project_link_and_init() {
 
     Command::new("edgedb").arg("project").arg("instance").arg("status")
         .arg("--extended")
+        .current_dir("tests/proj/project2")
         .assert()
         .context("project-instance-status", "show extended status")
         .code(3);
